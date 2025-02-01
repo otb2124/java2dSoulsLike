@@ -47,7 +47,7 @@ public class GamePanel extends JPanel implements Runnable{
     public int screenHeigth2 = screenHeigth;
     BufferedImage tempScreen;
     Graphics2D g2;
-    public boolean fullScreenOn = false;
+    public boolean fullScreenOn = true;
 
     //FPS
     int FPS = 60;
@@ -117,7 +117,7 @@ public class GamePanel extends JPanel implements Runnable{
         as.setNPC();
         as.setMob();
         em.setup();
-        gameState = playState;
+        gameState = titleState;
 
         tempScreen = new BufferedImage(screenWidth, screenHeigth, BufferedImage.TYPE_INT_ARGB);
         g2 = (Graphics2D)tempScreen.getGraphics();
